@@ -1,0 +1,111 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #e09, #d0e);
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: auto;
+}
+
+/* Header */
+h1 {
+
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.8em;
+}
+
+/* Game Controls */
+.game-controls {
+    margin-bottom: 20px;
+}
+
+button,
+select {
+    font-size: 16px;
+    margin: 10px 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #c7a6a6;
+    color: #fff;
+    box-shadow: #8a8a8a 1px 1px 10px;
+}
+
+button:hover,
+select:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Game Board Styling */
+#game-board {
+    display: inline-grid;
+    gap: 2px;
+    background-color: #444;
+    padding: 3px;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+.cell {
+    width: 35px;
+    height: 35px;
+    background-color: #8a8a8a;
+    border: 1px solid #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Cell States */
+.cell.revealed {
+    background-color: #ddd;
+    color: #333;
+}
+
+.cell.mine {
+    background-color: #ff4b5c;
+    color: #fff;
+}
+
+.cell.flagged {
+    background-color: #ffd700;
+    color: #333;
+}
+
+/* Info Section */
+#game-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#ai-status {
+    font-weight: bold;
+    color: #d9534f;
+}
