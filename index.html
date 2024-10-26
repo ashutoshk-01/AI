@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minesweeper with AI</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Pacifico&display=swap');
-        </style>
+    <title>Minesweeper AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>MINESWEEPER AI</h1>
+        <h1>Minesweeper AI</h1>
         <div class="game-controls">
             <button id="new-game">New Game</button>
             <select id="difficulty">
@@ -24,15 +22,16 @@
             <button id="ai-move">AI Move</button>
             <button id="toggle-ai">Toggle AI</button>
         </div>
-        <div id="game-board"></div>
+        <div class="game-board-container">
+            <div id="game-board"></div>
+        </div>
         <div id="game-info">
             <p>Mines: <span id="mine-count">0</span></p>
-            <p>Time: <span id="timer">0</span></p>
-            <p>AI Status: <span id="ai-status">Off</span></p>
+            <p>Time: <span id="timer">0</span>s</p>
+            <p>AI: <span id="ai-status">Off</span></p>
         </div>
     </div>
     <script src="minesweeper.js"></script>
 </body>
 
 </html>
-

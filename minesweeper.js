@@ -18,13 +18,20 @@ class PerformanceTracker {
     }
 
     getResults() {
-        return {
+        const results = {
             winRate: this.gamesWon / this.gamesPlayed,
             avgCompletionTime: this.totalTime / this.gamesPlayed,
             avgMovesPerGame: this.totalMoves / this.gamesPlayed,
             efficiency: this.totalCorrectFlags / this.totalMoves,
             avgDecisionTime: this.totalDecisionTime / this.totalMoves
         };
+    
+        // Save to localStorage
+        let savedData = JSON.parse(localStorage.getItem('minesweeperPerformance')) || [];
+        savedData.push(results);
+        localStorage.setItem('minesweeperPerformance', JSON.stringify(savedData));
+    
+        return results;
     }
 }
 class Minesweeper {
